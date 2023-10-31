@@ -87,17 +87,24 @@ public class  Board
     
     return tempPhrase;
   }  
-
+/*Author:
+*/
   public boolean guessLetter(String guess)
   {
-    boolean foundLetter = false;
+// The letter is not found at initialization.
+    boolean foundLetter = false; 
+// The phrase is not solved yet at initialization.
     String newSolvedPhrase = "";
-    
+    //Loops for each letter of the word.
     for (int i = 0; i < phrase.length(); i++)
     {
+	//Active if letter is found in phrase
       if (phrase.substring(i, i + 1).equals(guess))
       {
+	//
+	// adds guessed letter to the current guessed phrase
         newSolvedPhrase += guess + " ";
+	// indicates that a letter has been found
         foundLetter = true;
       }
       else
